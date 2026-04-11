@@ -1,0 +1,102 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'contact/style.css' %}">
+    
+</head>
+<body>
+
+<header>
+    <h1 class="h">Mirza</h1>
+    <nav class="navbar">
+        <ul>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skill">Skill</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div id="top" class="top-section fade-in">
+    <h3>Hi, my  name  is </h3>
+    <h1 class="fade-in delay-1">Mirza Golam Hafiz</h1>
+    <h1 class="fade-in delay-2">I am a passionate Web Developer</h1>
+    <p class="fade-in delay-3">I build modern and responsive websites</p>
+</div>
+
+<section id="about" class="about fade-in delay-4">
+    <h2>About Me</h2>
+    <p>
+        I am a beginner web developer who is passionate about learning new technologies and building creative websites.  
+        Currently, I am focusing on HTML, CSS, and JavaScript to improve my skills.
+        My goal is to become a professional full-stack developer and work with international clients.
+    </p>
+    <img src="{% static 'contact/images/azom.jpg' %}" alt="Example Image" width="200">
+</section>
+
+<section id="projects" class="projects">
+    <h2>Projects</h2>
+
+    <div class="project1">
+        <h3>Project One</h3>
+        <p>A web app for fitness tracking.</p>
+    </div>
+
+    <div class="project2">
+        <h3>Project Two</h3>
+        <p>A mobile app for task management.</p>
+    </div>
+    
+    <div class="project3">
+        <h3>Project Three</h3>
+        <p>A desktop application for data analysis.</p>
+    </div>
+
+    <div class="project4">
+        <h3>Project Four</h3>
+        <p>A web app for social networking.</p>
+    </div>
+
+     <div class="project5">
+        <h3>Project Five</h3>
+        <p>A personal portfolio website.</p>
+     </div>
+</section>
+
+<section id="skill" class="skill">
+    <h2>My Skill</h2>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>Django</li>
+        <li>React</li>
+        <li>Next.js</li>
+        <li>MySQL</li>
+   
+</section>
+
+<section id="contact" class="contact">
+    <h1>Contact Us</h1>
+    <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Send</button>
+</form>
+</section>
+
+<footer class="footer">
+    <p>&copy; 2026 Mirza | All Rights Reserved</p>
+    <div class="social">
+        <a href="#">Facebook</a> |
+        <a href="#">GitHub</a> |
+        <a href="#">LinkedIn</a>
+    </div>
+</footer>
+
+</body>
+</html>
